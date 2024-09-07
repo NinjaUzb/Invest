@@ -28,8 +28,8 @@
       position: fixed;
       z-index: 99999999;
       width: 100%;
-      background: #263238;
       display: flex;
+      background-color: #fff;
       align-items: center;
       justify-content: space-around;
       padding: 20px 0;
@@ -48,17 +48,24 @@
 }
 .menu a{
       text-decoration: none;
-      color: white;
+      color: black;
+      opacity: 0.3;
       font-weight: bold;
+      transition: 0.7s;
+}
+.menu a:hover{
+      color: #31543B;
+      opacity: 1;
 }
 .menu .active{
-      color: #7DBA28;
+      opacity: 1;
+      color: #31543B;
 }
 .sign-up button{
       border: none;
       padding: 5px 12px;
       border-radius: 16px;
-      background-color: #7DBA28;
+      background-color: #31543B;
       color: white;
       font-weight: bold;
       cursor: pointer;
@@ -70,54 +77,73 @@
 
 .head{
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-around;
-      padding: 100px 0;
+      gap: 30px;
+      text-align: center;
+      padding: 200px 0;
 }
 .head-left{
       display: flex;
       flex-direction: column;
       gap: 30px;
 }
-.head-left h1{
-      font-size: 42px;
-      line-height: 40px;
+.head h1{
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 60px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.head-left button{
+.head p{
+      opacity: 0.5;
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.head button{
       width: 250px;
       padding: 10px 0;
-      border-radius: 16px;
       border: none;
-      background-color: #7DBA28;
+      background-color: #31543B;
       color: white;
       font-size: 20px;
       cursor: pointer;
+      transition: 0.7s;
+}
+.head button:hover{
+      border: 1px solid #31543B;
+      color: #31543B;
 }
 
 /* stats */
 
 .stats{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      background-color: #00000015;
-      padding: 50px 0;
-}
-.stat{
+      background: #243D31;
+      padding: 150px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 100px;
+}
+.stats-top{
+      gap: 250px;
+}
+.stats-top h1{
+      font-family: Arial, Helvetica, sans-serif;
+}
+.stats-top p{
+      font-size: 14px;
+      opacity: 0.5;
+      font-family: Arial, Helvetica, sans-serif;
+}
+.stat{
+      line-height: 1px;
+      text-align: center;
 }
 .stat h1{
-      font-size: 35px;
+      font-size: 60px;
+      font-family: Arial, Helvetica, sans-serif;
       font-weight: bold;
-      color: #7DBA28;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.stat p{
-      font-size: 25px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 /* Investors */
@@ -126,55 +152,131 @@
       padding: 50px 0;
       text-align: center;
 }
-.investors-title , .startaps-title{
-      color: #7DBA28;
-      margin-bottom: 50px;
-      font-size: 45px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.chance{
-      text-align: start !important;
-      color: #7DBA28;
-      width: 100%;
-      display: flex;
-      align-items: start;
-      justify-content: space-around;
-      padding: 20px 40px;
-}
-.chance-text{
-      margin-top: 70px;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-}
-.chance-text h1{
-      font-size: 30px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.chance-text p{
-      margin-top: 15px;
-      font-size: 20px;
-      opacity: 0.7;
-      line-height: 20px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.startaps{
-      text-align: center;
-}
-.partners{
+.startups{
       padding: 50px 0;
       text-align: center;
 }
-
+.bg-darkgreen{
+      background-color: #243D31;
+      color: white !important;
+      transition: 0.7s !important;
+}
+.bg-darkgreen:hover{
+      border: 1px solid #243D31;
+      background-color: #fff;
+      color: black !important;
+}
+.card{
+      border: 1px solid #243D31;
+      width: 400px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 25px 15px !important;
+}
+.aa{
+      transition: 0.7s;
+}
+.aa:hover{
+      background-color: #243D31;
+      color: white !important;
+}
+.card-image{
+      width: 100%;
+}
+.card-image img{
+      width: 80%;
+}
+.card h3{
+      font-family: Arial, Helvetica, sans-serif
+}
+.card p{
+      opacity: 0.7;
+}
+.investors-title , .startaps-title{
+      color: #31543B;
+      margin-bottom: 50px;
+      font-size: 45px;
+      font-family: Arial, Helvetica, sans-serif
+}
+/* Startaps */
+.startaps{
+      padding: 50px 120px;
+}
+.startups-head{
+      padding-bottom: 30px;
+}
+.startups-head h1{
+      font-family: Arial, Helvetica, sans-serif;
+}     
+.startups-head a{
+      font-family: Arial, Helvetica, sans-serif;
+      color: #243D31;
+}
+.startups-card{
+      width: 410px;
+      border-radius: 16px;
+      padding: 20px 15px;
+      height: 300px;
+      position: relative;
+}
+.card-name {
+      align-items: center;
+}
+.card-name img{
+      width: 60px;
+}
+.card-name h2{
+      margin: 0;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif
+}
+.card-desc p{
+      opacity: 0.5 !important;
+}
+.hashtag{
+      position: absolute;
+      bottom: 25px;
+      width: 100px;
+      text-align: center;
+      padding: 4px 5px;
+      border-radius: 10px;
+      background-color: rgb(229, 228, 228);
+}
+.hashtag2{
+      position: absolute;
+      bottom: 25px;
+      left: 120px;
+      width: 100px;
+      text-align: center;
+      padding: 4px 5px;
+      border-radius: 10px;
+      background-color: rgb(229, 228, 228);
+}
 /* footer */
 
 .footer{
-      background-color: #263238;
+      background-color: #243D31;
       color: white;
-
+      font-family: Arial, Helvetica, sans-serif;
+}
+.footer h2{
+      font-size: 25px !important;
 }
 .footer a{
       text-decoration: none;
       color: white;
+}
+.social{
+      padding-top: 30px;
+}
+.item{
+      width: 50px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      border-radius: 50%;
 }

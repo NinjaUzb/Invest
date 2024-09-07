@@ -3,23 +3,26 @@ import Logo from '../assets/logo.jpg'
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  return (
-    <div className='navbar'>
-            <div className="logo">
-                  <img src={Logo} alt="" />
+      return (
+            <div className='navbar'>
+                  <div className="nav-left d-flex align-items-center gap-5">
+                        <div className="logo">
+                              <img src={Logo} alt="" />
+                        </div>
+                        <div className="menu">
+                              <Link className='active'>Home</Link>
+                              <Link>Startups</Link>
+                              <Link>Investors</Link>
+                              <Link>Partners</Link>
+                              <Link>FAQ</Link>
+                        </div>
+
+                  </div>
+                  <div className="sign-up">
+                        <button className='btn ps-5 pe-5 fw-lighter'>Sign in</button>
+                  </div>
             </div>
-            <div className="menu">
-                  <Link className='active'>Bosh sahifa</Link>
-                  <Link>Loyihalar</Link>
-                  <Link>Investorlar</Link>
-                  <Link>Hamkorlar</Link>
-                  <Link>FAQ</Link>
-            </div>
-            <div className="sign-up">
-                  <button>Tizimga kirish</button>
-            </div>
-    </div>
-  );
+      );
 }
 
 export default Navbar;
